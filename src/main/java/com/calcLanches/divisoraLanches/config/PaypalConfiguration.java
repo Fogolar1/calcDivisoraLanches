@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PaypalConfiguration {
 
-    @Bean
-    public PayPalHttpClient getPaypalClient( @Value("${client.paypal.clientId}") String clientId,
-                                             @Value("${client.paypal.clientSecret}") String clientSecret){
-        return new PayPalHttpClient(new PayPalEnvironment.Sandbox(clientId, clientSecret));
-    }
+//    @Bean
+//    public PayPalHttpClient getPaypalClient( @Value("${client.paypal.clientId}") String clientId,
+//                                             @Value("${client.paypal.clientSecret}") String clientSecret){
+//        return new PayPalHttpClient(new PayPalEnvironment.Sandbox(clientId, clientSecret));
+//    }
 }

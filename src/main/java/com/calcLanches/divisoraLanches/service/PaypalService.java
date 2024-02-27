@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 @Log4j2
 public class PaypalService {
 
-    private final PayPalHttpClient payPalHttpClient;
+   // private final PayPalHttpClient payPalHttpClient;
 
     public String gerarUrlPaypal(Float total){
         OrderRequest orderRequest = new OrderRequest();
@@ -34,19 +34,19 @@ public class PaypalService {
         orderRequest.applicationContext(applicationContext);
         OrdersCreateRequest ordersCreateRequest = new OrdersCreateRequest().requestBody(orderRequest);
 
-        try {
-//            HttpResponse<Order> orderHttpResponse = payPalHttpClient.execute(ordersCreateRequest);
-//            Order order = orderHttpResponse.result();
-
-            return order.links().stream()
-                    .filter(link -> "approve".equals(link.rel()))
-                    .findFirst()
-                    .orElseThrow(NoSuchElementException::new)
-                    .href();
-
-        }  catch (IOException e) {
-            log.error(e.getMessage());
-        }
+//        try {
+//           HttpResponse<Order> orderHttpResponse = payPalHttpClient.execute(ordersCreateRequest);
+//           Order order = orderHttpResponse.result();
+//
+//            return order.links().stream()
+//                    .filter(link -> "approve".equals(link.rel()))
+//                    .findFirst()
+//                    .orElseThrow(NoSuchElementException::new)
+//                    .href();
+//
+//        }  catch (IOException e) {
+//            log.error(e.getMessage());
+//        }
 
         return "";
     }
