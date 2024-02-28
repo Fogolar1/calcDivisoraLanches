@@ -8,5 +8,7 @@ import java.util.List;
 public class Dto {
     List<PessoasValoresDto> pessoasValores;
     Float desconto;
-    Float entrega;
+    Float acrescimos;
+    Float descontoPct;
+    Float acrescimosPct;
 }
